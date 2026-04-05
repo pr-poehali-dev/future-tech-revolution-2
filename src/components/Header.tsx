@@ -26,7 +26,7 @@ export const Header = () => {
         </nav>
         <a
           className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-primary hover:text-primary/80"
-          href="#sign-in"
+          href="/register"
         >
           Начать торговлю
         </a>

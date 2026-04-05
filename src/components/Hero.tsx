@@ -22,7 +22,7 @@ export function Hero() {
           Мгновенные сделки, минимальные комиссии, максимальная безопасность. Трейдинг нового поколения.
         </p>
 
-        <a className="contents max-sm:hidden" href="#trading">
+        <a className="contents max-sm:hidden" href="/register">
           <Button
             className="mt-14 btn-glow"
             onMouseEnter={() => setHovering(true)}
@@ -31,7 +31,7 @@ export function Hero() {
             [Начать торговлю]
           </Button>
         </a>
-        <a className="contents sm:hidden" href="#trading">
+        <a className="contents sm:hidden" href="/register">
           <Button
             size="sm"
             className="mt-14 btn-glow"
