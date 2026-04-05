@@ -15,35 +15,35 @@
     --popover: 0 0% 0%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 48 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 36 100% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 220 15% 12%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 10% 14%;
+    --muted-foreground: 220 5% 55%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 36 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 26%;
-    --input: 0 0% 26%;
-    --ring: 48 100% 50%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 36 100% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 5%;
+    --sidebar-background: 220 15% 5%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 48 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
+    --sidebar-primary: 36 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 220 15% 12%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 48 100% 50%;
+    --sidebar-border: 220 10% 15%;
+    --sidebar-ring: 36 100% 50%;
   }
 }
 
@@ -82,11 +82,13 @@
   }
 
   .font-sentient {
-    font-family: 'PT Serif', serif;
+    font-family: "PT Serif", serif;
   }
 
   .shadow-glow {
-    box-shadow: 0 0 8px 2px var(--tw-shadow-color);
+    box-shadow:
+      0 0 12px 3px var(--tw-shadow-color),
+      0 0 24px 6px var(--tw-shadow-color);
   }
 }
 
@@ -106,9 +108,33 @@
 
 /* Vignette effect overlay */
 #webgl::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    transparent 20%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.btn-glow {
+  box-shadow:
+    0 0 15px rgba(255, 153, 0, 0.4),
+    0 0 30px rgba(255, 153, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow:
+    0 0 20px rgba(255, 153, 0, 0.6),
+    0 0 40px rgba(255, 153, 0, 0.3),
+    0 0 60px rgba(255, 153, 0, 0.15);
+}
+
+.text-glow {
+  text-shadow:
+    0 0 10px rgba(255, 153, 0, 0.5),
+    0 0 20px rgba(255, 153, 0, 0.3);
 }
